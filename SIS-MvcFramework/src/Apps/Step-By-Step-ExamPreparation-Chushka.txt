@@ -1,0 +1,3 @@
+Създаваме нов конзолен проект /Console App (.Net Core)/ в папка Apps
+В него слагаме дипендънсита  Add  - Reference - ☒SIS.MvcFramework
+
