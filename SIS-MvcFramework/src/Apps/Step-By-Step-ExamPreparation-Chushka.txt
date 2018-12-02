@@ -1,3 +1,13 @@
-Създаваме нов конзолен проект /Console App (.Net Core)/ в папка Apps
-В него слагаме дипендънсита  Add  - Reference - ☒SIS.MvcFramework
+Създаваме нов конзолен проект /Console App (.Net Core)/ в папка Apps.
+В него слагаме дипендънсита  Add  - Reference - ☒SIS.MvcFramework.
+От NuGet Package Manager добавяме Microsoft.EntityFrameworkCore.SqlServer.
+Сетваме проекта да се стартира по подразбиране.
+-> Build Solution
+Създаваме Startup.cs в който имплементираме class Startup : IMvcApplication.
+Implement Interfaces:
+MvcFrameworkSettings - return new MvcFrameworkSettings();
+ConfigureServices - оставяме го празен
+В Progra.cs слагаме WebHost.Start(new Startup()); на мястото на Console.WriteLine("Hello World!");
+Създаваме папките: Controllers, Data, Models, ViewModels, Views, wwwroot
+-> Build Solution
 
