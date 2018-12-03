@@ -7,15 +7,13 @@ namespace ChushkaWebApp.Data
     {
         public DbSet<User> Users { get; set; }
 
-
         public DbSet<Product> Products { get; set; }
-
 
         public DbSet<Order> Orders { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=.;Database=ChushkaDb;Integrated Security=True");
+            optionsBuilder.UseSqlServer("Server=.;Database=ChushkaDb;Integrated Security=True;");
         }
     }
 }
