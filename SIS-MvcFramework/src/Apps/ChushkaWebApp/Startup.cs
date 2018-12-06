@@ -1,8 +1,8 @@
-﻿using SIS.MvcFramework;
-using SIS.MvcFramework.Services;
-
-namespace ChushkaWebApp
+﻿namespace ChushkaWebApp
 {
+	using SIS.MvcFramework;
+	using SIS.MvcFramework.Services;
+
     public class Startup : IMvcApplication
     {
         public MvcFrameworkSettings Configure()
