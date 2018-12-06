@@ -1,4 +1,5 @@
-﻿using SIS.MvcFramework;
+﻿using ChushkaWebApp.Data;
+using SIS.MvcFramework;
 
 namespace ChushkaWebApp.Controllers
 {
@@ -6,6 +7,9 @@ namespace ChushkaWebApp.Controllers
     {
         public BaseController()
         {
+            this.Db = new ApplicationDbContext();
         }
+
+        public ApplicationDbContext Db { get; } 
     }
 }

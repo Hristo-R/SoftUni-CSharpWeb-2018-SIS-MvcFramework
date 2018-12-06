@@ -13,7 +13,7 @@ namespace ChushkaWebApp.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=.;Database=ChushkaDb;Integrated Security=True;");
+            optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESS;Database=ChushkaDb;Integrated Security=True;");
         }
     }
 }
