@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SIS.MvcFramework", "SIS.Mvc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SIS.MvcFramework.Tests", "SIS.MvcFramework.Tests\SIS.MvcFramework.Tests.csproj", "{432C3CFB-938E-4798-8C7D-71AA68F4B2E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChushkaWebApp", "Apps\ChushkaWebApp\ChushkaWebApp.csproj", "{253BB5B7-E67C-4B1C-A4A0-F4B17BFC0938}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChushkaWebApp", "Apps\ChushkaWebApp\ChushkaWebApp.csproj", "{253BB5B7-E67C-4B1C-A4A0-F4B17BFC0938}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
