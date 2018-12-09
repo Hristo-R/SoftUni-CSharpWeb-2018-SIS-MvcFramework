@@ -18,7 +18,31 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNav">
-                    <ul class="navbar-nav">
+                    @if (User.IsLoggedIn)
+                    {
+                    <ul class="navbar-nav right-side">
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-white" href="/">Home</a>
+                        </li>
+                        @if (User.Role == "Admin")
+                        {
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-white" href="/products/create">Create Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-white" href="/orders/all">All Orders</a>
+                        </li>
+                        }
+                    </ul>
+                    <ul class="navbar-nav left-side">
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-white" href="/users/logout">Logout</a>
+                        </li>
+                    </ul>
+                    }
+                    @else
+                    {
+                    <ul class="navbar-nav right-side">
                         <li class="nav-item">
                             <a class="nav-link nav-link-white" href="/">Home</a>
                         </li>
@@ -29,6 +53,7 @@
                             <a class="nav-link nav-link-white" href="/users/register">Register</a>
                         </li>
                     </ul>
+                    }
                 </div>
             </nav>
         </header>
