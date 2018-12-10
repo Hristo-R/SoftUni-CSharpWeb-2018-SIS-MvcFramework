@@ -21,6 +21,7 @@ namespace ChushkaWebApp.Controllers
                         Price = p.Price,
                         Description = p.Description
                     });
+
                 var model = new IndexViewModel
                 {
                     Products = products
