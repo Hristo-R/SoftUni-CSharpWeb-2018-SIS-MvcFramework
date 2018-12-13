@@ -1,6 +1,8 @@
-﻿using ChushkaWebApp.ViewModels.Products;
+﻿using ChushkaWebApp.Models;
+using ChushkaWebApp.ViewModels.Products;
 using SIS.HTTP.Responses;
 using SIS.MvcFramework;
+using System;
 using System.Linq;
 
 namespace ChushkaWebApp.Controllers
@@ -27,6 +29,29 @@ namespace ChushkaWebApp.Controllers
             }
 
             return this.View(viewModel);
+        }
+
+        [Authorize]
+        public IHttpResponse Order(int id)
+        {
+            var user = this.Db.Users.FirstOrDefault(u => u.Username == this.User.Username);
+
+            if (user == null)
+            {
+                return this.BadRequestError("Invalid user.");
+            }
+
+            var order = new Order
+            {
+                OrderedOn = DateTime.UtcNow,
+                ProductId = id,
+                UserId = user.Id
+            };
+
+            this.Db.Orders.Add(order);
+            this.Db.SaveChanges();
+
+            return this.Redirect("/");
         }
     }
 }
