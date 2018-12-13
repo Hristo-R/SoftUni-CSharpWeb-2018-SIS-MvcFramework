@@ -21,7 +21,7 @@ namespace SIS.WebServer
         public Server(int port, ServerRoutingTable serverRoutingTable)
         {
             this.port = port;
-            this.listener = new TcpListener(IPAddress.Parse(LocalhostIpAddress), port);
+            this.listener = new TcpListener(IPAddress.Parse(LocalhostIpAddress), 8080);
 
             this.serverRoutingTable = serverRoutingTable;
         }
