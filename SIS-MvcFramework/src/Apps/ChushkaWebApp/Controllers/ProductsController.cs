@@ -53,5 +53,12 @@ namespace ChushkaWebApp.Controllers
 
             return this.Redirect("/");
         }
+
+        [Authorize("Admin")]
+        public IHttpResponse Create()
+        {
+
+            return this.View();
+        }
     }
 }

@@ -71,6 +71,11 @@ namespace ChushkaWebApp.Controllers
 
         public IHttpResponse Register()
         {
+            if (this.User.IsLoggedIn)
+            {
+                return this.Redirect("/");
+            }
+
             return this.View();
         }
 
