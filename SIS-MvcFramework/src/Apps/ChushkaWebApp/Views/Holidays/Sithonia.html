@@ -1,0 +1,576 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            color: #000;
+            font-family: Tahoma,Verdana,Arial,sans-serif;
+            font-size: 12px;
+            background-color: #fff;
+        }
+
+        h2 {
+            color: #366fe9;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            color: #000;
+            font-family: Tahoma,Verdana,Arial,sans-serif;
+            font-size: 12px;
+            background-color: #fff;
+        }
+
+        #centre {
+            width: 650px;
+            margin: auto;
+            position: relative;
+        }
+
+        /*table*/
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            table-layout: fixed;
+            width: 650px;
+            *margin-left: -100px; /*ie7*/
+        }
+
+        td, th {
+            vertical-align: top;
+            border-top: 1px solid #ccc;
+            padding: 4px;
+            width: 100px;
+        }
+
+        .fix {
+            position: absolute;
+            *position: relative; /*ie7*/
+            border-top: 1px solid #ccc;
+            margin-left: -200px;
+            width: 200px;
+            text-align: left;
+        }
+
+        .outer {
+            position: relative;
+        }
+
+        .inner {
+            overflow-x: scroll;
+            overflow-y: visible;
+            margin-left: 200px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .row > .column {
+            padding: 0 8px;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .column {
+            float: left;
+            width: 25%;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 0px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: white;
+        }
+
+        /* Modal Content */
+        .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            width: 90%;
+            max-width: 650px;
+        }
+
+        /* The Close Button */
+        .close {
+            color: rgb(255, 255, 255);
+            padding: 8px 12px;
+            position: absolute;
+            top: 0px;
+            right: 0;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+            .close:hover,
+            .close:focus {
+                color: #999;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+        .mySlides {
+            display: none;
+        }
+
+        .cursor {
+            cursor: pointer;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+            /* On hover, add a black background color with a little bit see-through */
+            .prev:hover,
+            .next:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        img {
+            margin-bottom: 10px;
+        }
+
+        .caption-container {
+            margin-top: -50px;
+            margin: auto;
+            width: 650px;
+            text-align: center;
+            background-color: #366fe9;
+            padding: 2px 16px;
+            color: white;
+        }
+
+        .demo {
+            opacity: 0.6;
+        }
+
+            .active,
+            .demo:hover {
+                opacity: 1;
+            }
+
+        img.hover-shadow {
+            transition: 0.3s;
+        }
+
+        .hover-shadow:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+
+        #topBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #366fe9;
+            ;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+            #topBtn:hover {
+                background-color: #555;
+            }
+    </style>
+</head>
+<body>
+    <div id="centre">
+
+        <h2>ОРГАНИЗИРАНИ ПОЧИВКИ ХАЛКИДИКИ - СИТОНИЯ- ЛЯТО 2019</h2>
+        <hr>
+        <h3>ХОТЕЛ “OLYMPIC BIBIS” *** – МЕТАМОРФОСИ – СИТОНИЯ</h3>
+        <p><strong>Разположение:</strong> Разположен в на 900 м. от селището Метаморфоси и на 200 метра от плажа, в близост до хотел Blue Dolphin.</p>
+        <p><strong>Хотелски услуги:</strong> Ресторант, Бар, Паркинг, Басейн, Детска площадка, баскетболно игрище, мини маркет, безплатен безжичен интернет в общите части. Изхранването е на блок маса. Хотелът разполага с условия за хора в неравностойно положение. Чадъри и шезлонги на плажа – платени.</p>
+        <p><strong>Стаи:</strong> 29 студиа и апартаменти с:  Телевизор, Климатик, Хладилник, Баня, Балкон</p>
+        </br>
+
+        <div class="row">
+            <div class="column">
+                <img src="https://www.melitours.bg/wp-content/uploads/2018/12/olympic_bibis6-1024x768.jpeg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="https://www.melitours.bg/wp-content/uploads/2018/12/olympic_bibis7-1024x768.jpeg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="https://www.melitours.bg/wp-content/uploads/2018/12/olympic_bibis5-1024x768.jpeg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="https://www.melitours.bg/wp-content/uploads/2018/12/olympic_bibis4-1024x768.jpg" style="width:100%;" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="https://www.melitours.bg/wp-content/uploads/2018/12/olympic_bibis3-1024x768.jpeg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="https://www.melitours.bg/wp-content/uploads/2018/12/olympic_bibis2-1024x768.jpeg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+            </div>
+        </div>
+
+        <div id="myModal" class="modal">
+
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+            <br>
+
+            <div class="modal-content">
+
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+
+                <div class="mySlides">
+                    <div class="numbertext">1 / 6</div>
+                    <img src="https://www.melitours.bg/wp-content/uploads/2018/12/olympic_bibis6-1024x768.jpeg" style="width:650px">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 6</div>
+                    <img src="https://www.melitours.bg/wp-content/uploads/2018/12/olympic_bibis7-1024x768.jpeg" style="width:650px">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 6</div>
+                    <img src="https://www.melitours.bg/wp-content/uploads/2018/12/olympic_bibis5-1024x768.jpeg" style="width:650px">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 6</div>
+                    <img src="https://www.melitours.bg/wp-content/uploads/2018/12/olympic_bibis4-1024x768.jpg" style="width:650px">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">5 / 6</div>
+                    <img src="https://www.melitours.bg/wp-content/uploads/2018/12/olympic_bibis3-1024x768.jpeg" style="width:650px">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">6 / 6</div>
+                    <img src="https://www.melitours.bg/wp-content/uploads/2018/12/olympic_bibis2-1024x768.jpeg" style="width:650px">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <div class="column">
+                    <img class="demo cursor" src="https://www.melitours.bg/wp-content/uploads/2018/12/olympic_bibis6-1024x768.jpeg" style="width:100%" onclick="currentSlide(1)" alt="ХОТЕЛ “OLYMPIC BIBIS” *** – МЕТАМОРФОСИ – СИТОНИЯ">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="https://www.melitours.bg/wp-content/uploads/2018/12/olympic_bibis7-1024x768.jpeg" style="width:100%" onclick="currentSlide(2)" alt="ХОТЕЛ “OLYMPIC BIBIS” *** – МЕТАМОРФОСИ – СИТОНИЯ">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="https://www.melitours.bg/wp-content/uploads/2018/12/olympic_bibis5-1024x768.jpeg" style="width:100%" onclick="currentSlide(3)" alt="ХОТЕЛ “OLYMPIC BIBIS” *** – МЕТАМОРФОСИ – СИТОНИЯ">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="https://www.melitours.bg/wp-content/uploads/2018/12/olympic_bibis4-1024x768.jpg" style="width:100%" onclick="currentSlide(4)" alt="ХОТЕЛ “OLYMPIC BIBIS” *** – МЕТАМОРФОСИ – СИТОНИЯ">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="https://www.melitours.bg/wp-content/uploads/2018/12/olympic_bibis3-1024x768.jpeg" style="width:100%" onclick="currentSlide(5)" alt="ХОТЕЛ “OLYMPIC BIBIS” *** – МЕТАМОРФОСИ – СИТОНИЯ">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="https://www.melitours.bg/wp-content/uploads/2018/12/olympic_bibis2-1024x768.jpeg" style="width:100%" onclick="currentSlide(6)" alt="ХОТЕЛ “OLYMPIC BIBIS” *** – МЕТАМОРФОСИ – СИТОНИЯ">
+                </div>
+            </div>
+        </div>
+
+        </br>
+        <p style="color:rgb(255, 0, 0)" ;><strong>РАННИ ЗАПИСВАНИЯ –  ДО ДАТА 31/03/2019 – ПЛАЩАНЕ 50% ДО 16/04/2019</strong></p>
+
+        <div class="scroller" ">
+            <div class="outer">
+                <div class="inner">
+                    <table>
+                        <tr>
+                            <th class="fix">
+                                <div align="right">ПЕРИОД</div></br></br>
+                                <div align="left">ВИД СТАЯ  HB</div>
+                            </th>
+                            <th valign="top">
+                                <div align="center">25/05-01/06</div>
+                                <div align="center">01/06-08/06</div>
+                                <div align="center">2019</div>
+                            </th>
+                            <th valign="top">
+                                <div align="center">08/06-15/06</div>
+                                <div align="center">2019</div>
+                            </th>
+                            <th valign="top">
+                                <div align="center">15/06-22/06</div>
+                                <div align="center">22/06-29/06</div>
+                                <div align="center">2019</div>
+                            </th>
+                            <th valign="top">
+                                <div align="center">29/06-06/07</div>
+                                <div align="center">2019</div>
+                            </th>
+                            <th valign="top">
+                                <div align="center">06/07-13/07</div>
+                                <div align="center">2019</div>
+                            </th>
+                            <th valign="top">
+                                <div align="center">13/07-20/07</div>
+                                <div align="center">2019</div>
+                            </th>
+                            <th valign="top">
+                                <div align="center">20/07-27/07</div>
+                                <div align="center">27/07-03/08</div>
+                                <div align="center">03/08-10/08</div>
+                                <div align="center">10/08-17/08</div>
+                                <div align="center">17/08-24/08</div>
+                                <div align="center">24/08-31/08</div>
+                            </th>
+                            <th valign="top">
+                                <div align="center">31/08-07/09</div>
+                                <div align="center">2019</div>
+                            </th>
+                            <th valign="top">
+                                <div align="center">07/09-14/09</div>
+                                <div align="center">14/09-21/09</div>
+                                <div align="center">2019</div>
+                            </th>
+                            <th valign="top">
+                                <div align="center">21/09-28/09</div>
+                                <div align="center">2019</div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="fix">В двойна и тройна стая с допълнително легло</td>
+                            <td><div align="center">389 лв.</div></br></td>
+                            <td><div align="center">484 лв.</div></td>
+                            <td><div align="center">552 лв.</div></td>
+                            <td><div align="center">622 лв.</div></td>
+                            <td><div align="center">650 лв.</div></td>
+                            <td><div align="center">689 лв.</div></td>
+                            <td><div align="center">718 лв.</div></td>
+                            <td><div align="center">576 лв.</div></td>
+                            <td><div align="center">552 лв.</div></td>
+                            <td><div align="center">389 лв.</div></td>
+                        </tr>
+                        <tr>
+                            <td class="fix">В апартамент с 2 спални</td>
+                            <td><div align="center">525 лв.</div></td>
+                            <td><div align="center">644 лв.</div></td>
+                            <td><div align="center">727 лв.</div></td>
+                            <td><div align="center">800 лв.</div></td>
+                            <td><div align="center">829 лв.</div></td>
+                            <td><div align="center">882 лв.</div></td>
+                            <td><div align="center">922 лв.</div></td>
+                            <td><div align="center">755 лв.</div></td>
+                            <td><div align="center">727 лв.</div></td>
+                            <td><div align="center">525 лв.</div></td>
+                        </tr>
+                        <tr>
+                            <td class="fix">3-ти възр. в двойна и тройна стая</td>
+                            <td><div align="center">265 лв.</div></td>
+                            <td><div align="center">313 лв.</div></td>
+                            <td><div align="center">348 лв.</div></td>
+                            <td><div align="center">382 лв.</div></td>
+                            <td><div align="center">396 лв.</div></td>
+                            <td><div align="center">415 лв.</div></td>
+                            <td><div align="center">429 лв.</div></td>
+                            <td><div align="center">360 лв.</div></td>
+                            <td><div align="center">349 лв.</div></td>
+                            <td><div align="center">265 лв.</div></td>
+                        </tr>
+                        <tr>
+                            <td class="fix">3-ти и 4-ти възрастен в апартамент</td>
+                            <td><div align="center">246 лв.</div></br></td>
+                            <td><div align="center">256 лв.</div></td>
+                            <td><div align="center">260 лв.</div></td>
+                            <td><div align="center">260 лв.</div></td>
+                            <td><div align="center">260 лв.</div></td>
+                            <td><div align="center">260 лв.</div></td>
+                            <td><div align="center">260 лв.</div></td>
+                            <td><div align="center">260 лв.</div></td>
+                            <td><div align="center">260 лв.</div></td>
+                            <td><div align="center">246 лв.</div></td>
+                        </tr>
+                        <tr>
+                            <td class="fix">5-ти възрастен в апартамент</td>
+                            <td><div align="center">290 лв.</div></td>
+                            <td><div align="center">304 лв.</div></td>
+                            <td><div align="center">310 лв.</div></td>
+                            <td><div align="center">310 лв.</div></td>
+                            <td><div align="center">310 лв.</div></td>
+                            <td><div align="center">310 лв.</div></td>
+                            <td><div align="center">310 лв.</div></td>
+                            <td><div align="center">310 лв.</div></td>
+                            <td><div align="center">310 лв.</div></td>
+                            <td><div align="center">290 лв.</div></td>
+                        </tr>
+                        <tr>
+                            <td class="fix">1-во дете 0-5,99 г. и 2-ро дете 0-2,99 г. във всички стаи и 2-ро дете от 2-11,99 г. в апартамент</td>
+                            <td><div align="center">75 лв.</div></br></br></td>
+                            <td><div align="center">75 лв.</div></td>
+                            <td><div align="center">75 лв.</div></td>
+                            <td><div align="center">75 лв.</div></td>
+                            <td><div align="center">75 лв.</div></td>
+                            <td><div align="center">75 лв.</div></td>
+                            <td><div align="center">75 лв.</div></td>
+                            <td><div align="center">75 лв.</div></td>
+                            <td><div align="center">75 лв.</div></td>
+                            <td><div align="center">75 лв.</div></td>
+                        </tr>
+                        <tr>
+                            <td class="fix">2-ро дете 2-5.99 г. и 1-во дете 6-11,99 г. в двойна и тройна стая</td>
+                            <td><div align="center">172 лв.</div></br></td>
+                            <td><div align="center">200 лв.</div></td>
+                            <td><div align="center">220 лв.</div></td>
+                            <td><div align="center">236 лв.</div></td>
+                            <td><div align="center">243 лв.</div></td>
+                            <td><div align="center">251 лв.</div></td>
+                            <td><div align="center">257 лв.</div></td>
+                            <td><div align="center">225 лв.</div></td>
+                            <td><div align="center">220 лв.</div></td>
+                            <td><div align="center">172 лв.</div></td>
+                        </tr>
+                        <tr>
+                            <td class="fix">2-ро дете 6-11,99 в тройна стая</td>
+                            <td><div align="center">209 лв.</div></td>
+                            <td><div align="center">249 лв.</div></td>
+                            <td><div align="center">278 лв.</div></td>
+                            <td><div align="center">306 лв.</div></td>
+                            <td><div align="center">318 лв.</div></td>
+                            <td><div align="center">332 лв.</div></td>
+                            <td><div align="center">342 лв.</div></td>
+                            <td><div align="center">287 лв.</div></td>
+                            <td><div align="center">278 лв.</div></td>
+                            <td><div align="center">209 лв.</div></td>
+                        </tr>
+                        <tr>
+                            <td class="fix">3-ро дете 2-11,99 в апартамент</td>
+                            <td><div align="center">228 лв.</div></td>
+                            <td><div align="center">239 лв.</div></td>
+                            <td><div align="center">243 лв.</div></td>
+                            <td><div align="center">243 лв.</div></td>
+                            <td><div align="center">243 лв.</div></td>
+                            <td><div align="center">243 лв.</div></td>
+                            <td><div align="center">243 лв.</div></td>
+                            <td><div align="center">243 лв.</div></td>
+                            <td><div align="center">243 лв.</div></td>
+                            <td><div align="center">228 лв.</div></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <p><strong><u>ЦЕНАТА</u></strong> е на човек, в лева, за пакет включващ: <strong>Транспорт</strong> в двете посоки, <strong style="color:rgb(255, 0, 179)" ;>7 нощувки със закуски и вечери</style></strong> на блок-маса и медицинска застраховка!</p>
+        <p><strong style="color:rgb(0, 0, 255)" ;>Забележка:</strong> Капацитетът на Двойната стая е максимум 3+1 бебе (0-1,99г)</p>
+        <p><strong style="color:rgb(0, 0, 255)" ;>Забележка:</strong> Капацитетът на Тройната стая с допълнително легло е максимум 3+1 дете (2-5,99г)</p>
+        <p style="color:rgb(255, 0, 0)" ;>*Цената не включва туристическа такса от 1,50 € на стая на вечер, която се заплаща на място в хотела.</p>
+        <p><strong style="color:rgb(255, 0, 179)" ;>Анулационни срокове:</strong><strong style="color:rgb(100, 100, 100)" ;> от 21 до 8 дни преди отпътуване – 50% неустойка; от 7 до 1 ден преди отпътуване – 100% неустойка.</strong></p>
+        <hr>
+
+        <!-- <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button> -->
+
+    </div>
+
+    <script>
+    function openModal() {
+      document.getElementById('myModal').style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById('myModal').style.display = "none";
+    }
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("topBtn").style.display = "block";
+      } else {
+        document.getElementById("topBtn").style.display = "none";
+      }
+    }
+
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+</body>
+</html>
